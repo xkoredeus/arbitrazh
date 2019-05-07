@@ -36,9 +36,10 @@ $(function() {
   //   if(res.success) parent.$.fancybox.close();
   // });
   $('#wrapper').fullpage({
-    anchors: ['1section', '2section', '3section', '4section', '5section', '6section'],
+    anchors: ['first-section', 'second-section', 'third-section', 'fourth-section', 'fifth-section', 'sixth-section'],
     navigation: true,
-    navigationPosition: 'right'
+    navigationPosition: 'right',
+    menu: '.nav'
   });
   $('.offer__mouse').on('click', function() {
     $("#wrapper").fullpage.moveTo($(this).index() + 1);

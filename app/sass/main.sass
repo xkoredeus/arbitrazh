@@ -194,11 +194,7 @@ button:active
 			bottom: -5%
 			left: -5%
 			z-index: 1
-			background: rgb(255,203,5)
-			background: -moz-linear-gradient(-45deg, rgba(255,203,5,1) 0%, rgba(80,184,72,1) 32%, rgba(0,191,243,1) 70%, rgba(238,51,123,1) 100%)
-			background: -webkit-linear-gradient(-45deg, rgba(255,203,5,1) 0%,rgba(80,184,72,1) 32%,rgba(0,191,243,1) 70%,rgba(238,51,123,1) 100%)
-			background: linear-gradient(135deg, rgba(255,203,5,1) 0%,rgba(80,184,72,1) 32%,rgba(0,191,243,1) 70%,rgba(238,51,123,1) 100%)
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffcb05', endColorstr='#ee337b',GradientType=1 )
+			background-color: #1E2F31
 			opacity: .7
 	.popup_call__wrp
 		max-width: 320px
@@ -232,6 +228,7 @@ button:active
 			.form__input
 				color: #2D2A2B
 				margin-bottom: 15px
+				background-color: #e3e3e3
 			input.form__input::placeholder
 				color: #2D2A2B
 			.btn
@@ -244,7 +241,7 @@ button:active
 				font-size: 12px
 				a
 					font-size: 12px
-					color: #00BFF3
+					color: #1E2F31
 .owl-carousel
 	.owl-dots
 		position: absolute
@@ -293,7 +290,7 @@ button:active
 	padding: 60px 0
 .section__ttl
 	font-size: 46px
-	color: #2D2A2B
+	color: #1E2F31
 	font-family: 'Panton-ExtraBold'
 	line-height: 1.2
 	letter-spacing: 1px
@@ -331,6 +328,8 @@ button:active
 	background: url('../img/banner__bg.jpg') no-repeat 50% 50% / cover
 	.fp-tableCell
 		vertical-align: top
+	&_inner
+		background-position-y: 0
 .header
 	padding: 30px 0
 	&__logo
@@ -730,3 +729,136 @@ button:active
 		transform: translateX(1px) rotate(0)
 	100%
 		transform: translateX(-1px) rotate(0)
+.nav
+	position: fixed
+	right: 50%
+	margin-right: calc(-1200px/2)
+	top: 50%
+	margin-top: calc((calc((calc(-6px*6))*6))/2)
+	display: flex
+	flex-direction: column
+	align-items: center
+	list-style-type: none
+	a
+		margin: 3px
+		background-color: #1E2F31
+		border-radius: 50%
+		width: 30px
+		height: 30px
+		display: flex
+		justify-content: flex-end
+		align-items: center
+		transform: scale(.4)
+		&.active
+			transform: scale(1)
+			span
+				opacity: 1
+		span
+			opacity: 0
+			font-size: 18px
+			color: #fff
+			margin-right: -5px
+.crumbs
+	display: flex
+	flex-wrap: wrap
+	list-style-type: none
+	padding-left: 0
+	margin-left: 0
+	margin-bottom: 30px
+	li,
+	a
+		position: relative
+		color: #1E2F31
+		padding: 8px 10px
+		border-radius: 3px
+	li:not(:last-child)
+		background-color: transparent
+		border: 1px solid #1E2F31
+		margin-right: 8px
+		&:hover
+			background-color: #1E2F31
+			a
+				color: #fff
+	li:last-child
+		background-color: #fff
+		box-shadow: 0px 2px 2px rgba(217, 180, 144, 0.5)
+.inner
+	padding: 50px 0
+	.articles
+		&__list
+			&-item
+				background-color: #fff
+				box-shadow: 0px 2px 2px rgba(217, 180, 144, 0.5)
+				padding: 30px
+				.btn
+					margin-top: 20px
+				&:not(:last-child)
+					&::after
+						display: none
+				&:hover
+					box-shadow: 0px 30px 50px #D9B490
+	div
+		&.pagination
+			display: flex
+			justify-content: center
+			align-items: center
+			margin-top: 20px
+			padding: 15px 0
+			ul
+				&.pagination
+					list-style-type: none
+					display: flex
+					justify-content: center
+					align-items: center
+					margin-bottom: 0
+					padding: 0
+					li
+						display: flex
+						justify-content: center
+						align-items: center
+						border-radius: 50%
+						&:not(:last-child)
+							margin-right: 5px
+						&.active
+							background-color: #1E2F31
+							a
+								color: #fff
+						a
+							color: #000
+							width: 25px
+							height: 25px
+							border: none
+							display: flex
+							justify-content: center
+							align-items: center
+						&:hover
+							opacity: .7
+						&.control
+							opacity: 1
+							color: #fff
+							position: relative
+							background-color: #1E2F31
+							a
+								width: 45px
+								height: 45px
+							span
+								width: 45px
+								height: 45px
+								opacity: 0
+							&::before
+								content: ''
+								position: absolute
+								left: 50%
+								margin-left: -15px
+								top: 50%
+								margin-top: -10px
+								width: 30px
+								height: 20px
+							&_prev
+								margin-right: 25px
+								&::before
+									background: url('../img/icon__arrow-prev.svg') no-repeat 50% 50% / contain
+							&_next
+								margin-left: 25px
+								&::before
+									background: url('../img/icon__arrow-next.svg') no-repeat 50% 50% / contain
