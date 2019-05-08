@@ -330,6 +330,7 @@ button:active
 		vertical-align: top
 	&_inner
 		background-position-y: 0
+		padding-bottom: 20px
 .header
 	padding: 30px 0
 	&__logo
@@ -590,6 +591,22 @@ button:active
 		max-width: 470px
 		display: block
 		margin: 25px auto 0
+	&.section_inner
+		padding-top: 80px
+		overflow: hidden
+		position: relative
+		background: #D6D6D6 url(../img/feed__bg.png) no-repeat 100% 100% / cover
+		&::before
+			content: ''
+			position: absolute
+			width: 480px
+			height: 100%
+			right: 0
+			top: 0
+			// background: url(../img/blog-feed__bg.svg) no-repeat 100% 100% / cover
+			opacity: .3
+		.container
+			position: relative
 .bottom__section
 	background-color: #D6D6D6
 	.fp-tableCell
@@ -729,35 +746,72 @@ button:active
 		transform: translateX(1px) rotate(0)
 	100%
 		transform: translateX(-1px) rotate(0)
-.nav
-	position: fixed
-	right: 50%
-	margin-right: calc(-1200px/2)
-	top: 50%
-	margin-top: calc((calc((calc(-6px*6))*6))/2)
-	display: flex
-	flex-direction: column
-	align-items: center
-	list-style-type: none
-	a
-		margin: 3px
-		background-color: #1E2F31
-		border-radius: 50%
-		width: 30px
-		height: 30px
-		display: flex
-		justify-content: flex-end
-		align-items: center
-		transform: scale(.4)
-		&.active
-			transform: scale(1)
+#fp-nav
+	position: fixed !important
+	right: 50% !important
+	margin-right: calc(-1200px/2) !important
+	top: 50% !important
+	margin-top: calc((calc((calc(-6px*6))*6))/2) !important
+	display: flex !important
+	flex-direction: column !important
+	align-items: center !important
+	list-style-type: none !important
+	li
+		width: auto !important
+		height: auto !important
+		margin: 3px !important
+		&:nth-child(1)
 			span
-				opacity: 1
+				&::after
+					content: '01'
+		&:nth-child(2)
+			span
+				&::after
+					content: '02'
+		&:nth-child(3)
+			span
+				&::after
+					content: '03'
+		&:nth-child(4)
+			span
+				&::after
+					content: '04'
+		&:nth-child(5)
+			span
+				&::after
+					content: '05'
+		&:nth-child(6)
+			span
+				&::after
+					content: '06'
+	a
+		margin: 3px !important
+		background-color: #1E2F31 !important
+		border-radius: 50% !important
+		width: 30px !important
+		height: 30px !important
+		display: flex !important
+		justify-content: flex-end !important
+		align-items: center !important
+		transform: scale(.4) !important
+		position: relative !important
+		&.active
+			transform: scale(1) !important
+			span
+				opacity: 1 !important
 		span
-			opacity: 0
-			font-size: 18px
-			color: #fff
-			margin-right: -5px
+			opacity: 0 !important
+			font-size: 18px !important
+			color: #fff !important
+			margin-right: -5px !important
+			background-color: transparent !important
+			&::after
+				position: absolute
+				top: -6px
+				right: -10px
+				font-size: 19px
+				color: #fff
+
 .crumbs
 	display: flex
 	flex-wrap: wrap
@@ -784,6 +838,27 @@ button:active
 		box-shadow: 0px 2px 2px rgba(217, 180, 144, 0.5)
 .inner
 	padding: 50px 0
+	// margin-bottom: 40px
+	position: relative
+	&::before
+		content: ''
+		position: absolute
+		width: 100%
+		height: 95px
+		left: 0
+		top: -62px
+		background: url(../img/content__border-top.png) no-repeat 50% 0% / auto
+		z-index: 2
+	&::after
+		content: ''
+		position: absolute
+		width: 100%
+		height: 95px
+		left: 0
+		bottom: -82px
+		background: url(../img/content__border-top.png) no-repeat 50% 0% / auto
+		transform: rotate(180deg)
+		z-index: 2
 	.articles
 		&__list
 			&-item
@@ -838,6 +913,8 @@ button:active
 							color: #fff
 							position: relative
 							background-color: #1E2F31
+							&:hover
+								background-color: #E4B27F
 							a
 								width: 45px
 								height: 45px
