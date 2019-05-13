@@ -164,7 +164,7 @@ button:active .shd:hover {
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: center;
-  padding: 12px 16px;
+  padding: 12px 28px;
   color: #fff;
   background-color: #1E2F31;
   display: inline-block;
@@ -187,6 +187,51 @@ button:active .shd:hover {
   color: #fff;
   background: #1E2F31;
   border-color: #1E2F31;
+}
+
+.btn_top {
+  font-family: 'Panton-Bold';
+  text-transform: uppercase;
+  width: 150px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #F6ECE2;
+  -webkit-border-radius: 50px;
+          border-radius: 50px;
+  border: 2px solid #1E2F31;
+  padding: 10px 15px;
+  position: fixed;
+  right: 50%;
+  margin-right: -webkit-calc(-1366px/2);
+  margin-right: calc(-1366px/2);
+  bottom: 90px;
+  z-index: 3;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: unset;
+  -o-transition: unset;
+  transition: unset;
+}
+
+.btn_top img {
+  margin-left: 10px;
+}
+
+.btn_top:hover img {
+  -webkit-transform: translateX(10px);
+      -ms-transform: translateX(10px);
+          transform: translateX(10px);
 }
 
 .img-fluid {
@@ -558,7 +603,7 @@ button:active .shd:hover {
 
 .banner_inner {
   background-position-y: 0;
-  padding-bottom: 20px;
+  padding-bottom: 50px;
 }
 
 .header {
@@ -940,6 +985,7 @@ button:active .shd:hover {
 }
 
 .portfolio .owl-carousel .owl-nav button.owl-prev {
+  left: auto;
   top: 100px;
   right: -70px;
 }
@@ -967,6 +1013,7 @@ button:active .shd:hover {
 
 .feed.section_inner {
   padding-top: 80px;
+  padding-bottom: 80px;
   overflow: hidden;
   position: relative;
   background: #D6D6D6 url(../img/feed__bg.png) no-repeat 100% 100%/cover;
@@ -996,6 +1043,11 @@ button:active .shd:hover {
 
 .contacts {
   padding-bottom: 100px;
+}
+
+.contacts.section_inner {
+  background-color: #D6D6D6;
+  padding-top: 100px;
 }
 
 .contacts__img {
@@ -1058,13 +1110,17 @@ button:active .shd:hover {
           transform: scale(0.97);
 }
 
-.contacts .letterbox__ttl {
+.contacts__feed .input__wrp {
+  max-width: unset;
+}
+
+.letterbox__ttl {
   font-size: 20px;
   font-family: 'Panton-ExtraBold';
   margin-bottom: 15px;
 }
 
-.contacts .letterbox .input__wrp {
+.letterbox .input__wrp {
   max-width: unset;
   width: 100%;
 }
@@ -1157,9 +1213,11 @@ button:active .shd:hover {
       -ms-flex-pack: justify;
           justify-content: space-between;
   color: #fff;
+  max-width: 151px;
 }
 
 .footer__akticom-ttl {
+  font-size: 12px;
   text-align: right;
   margin-right: 20px;
   position: relative;
@@ -1426,7 +1484,7 @@ button:active .shd:hover {
   width: 100%;
   height: 95px;
   left: 0;
-  top: -62px;
+  top: -82px;
   background: url(../img/content__border-top.png) no-repeat 50% 0%/auto;
   z-index: 2;
 }
@@ -1463,6 +1521,16 @@ button:active .shd:hover {
 .inner .articles__list-item:hover {
   -webkit-box-shadow: 0px 30px 50px #D9B490;
           box-shadow: 0px 30px 50px #D9B490;
+}
+
+.inner.contacts-page {
+  background: url("../img/contacts-page__bg.png") no-repeat 50% 0%/100%;
+  margin-top: -70px;
+  padding-top: 100px;
+}
+
+.inner.contacts-page::after, .inner.contacts-page::before {
+  display: none;
 }
 
 .inner div.pagination {

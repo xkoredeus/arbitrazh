@@ -1,42 +1,171 @@
-@media screen and (max-width: 1070px) {
-  .main-slider__item {
-    background-position-x: 20%;
+@media screen and (max-width: 1400px) {
+  .banner_inner {
+    -webkit-background-size: 150% 150%;
+            background-size: 150%;
   }
-  .main-slider__container {
-    padding-right: 30px;
-    padding-left: 30px;
+}
+
+@media screen and (max-width: 1024px) {
+  .banner_inner {
+    -webkit-background-size: 250% 250%;
+            background-size: 250%;
+    padding-bottom: 0;
   }
-  .main-slider .owl-carousel .owl-nav button.owl-prev {
+  .header__logo img {
+    max-width: 300px;
+  }
+  .header__nav-link,
+  .footer__nav-link {
+    font-size: 14px;
+  }
+  .header__nav-link span,
+  .footer__nav-link span {
+    padding: 13px 7px;
+  }
+  .header__nav-link:not(:last-child)::after,
+  .footer__nav-link:not(:last-child)::after {
+    top: 45%;
+  }
+  .offer__tel {
+    color: #fff;
+  }
+  .inner.contacts-page {
+    background: #D6D6D6;
+    margin-top: 0;
+    padding-top: 40px;
+  }
+  .inner::before,
+  .inner::after {
+    display: none;
+  }
+  .feed.section_inner {
+    background: #EED9C4;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .profile,
+  .portfolio {
+    overflow: hidden;
+  }
+  .contacts {
+    overflow: hidden;
+  }
+  .contacts.section_inner {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .crumbs li, .crumbs a {
+    font-size: 12px;
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+  .nav {
+    display: none;
+  }
+  .section {
+    padding: 60px 0;
+  }
+  .banner {
+    position: relative;
+    overflow: hidden;
+  }
+  .banner::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1E2F31;
+    opacity: .6;
     left: 0;
+    top: 0;
   }
-  .main-slider .owl-carousel .owl-nav button.owl-next {
-    right: 0;
+  .banner .container {
+    position: relative;
+  }
+  .banner.section {
+    padding-top: 0;
+  }
+  .bottom__section.section {
+    padding-bottom: 0;
+  }
+  .footer__nav-link span::before,
+  .header__nav-link span::before {
+    display: none;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .section__ttl,
-  .main-slider__ttl {
+  .header {
+    padding-bottom: 0;
+  }
+  .section__ttl {
     font-size: 25px;
+    margin-bottom: 20px;
+  }
+  .offer {
+    padding: 40px 0 80px;
+  }
+  .profile__img-right {
+    display: none;
+  }
+  .portfolio .owl-carousel .owl-nav button.owl-prev,
+  .portfolio .owl-carousel .owl-nav button.owl-next {
+    right: -14px;
+    -webkit-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+            transform: scale(0.7);
   }
 }
 
 @media screen and (max-width: 576px) {
-  .news__item-wrp {
-    max-width: 320px;
+  .section {
+    padding: 40px 0;
+  }
+  .offer__mouse {
+    margin-top: 30px;
+    -webkit-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+  .offer__mouse:hover {
+    -webkit-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+  .profile__descr-item {
+    font-size: 14px;
+  }
+  .profile__img-left {
+    min-height: 230px;
+  }
+  .profile__img-left::before {
+    background-position-y: 0;
+  }
+  .contacts__img {
+    min-height: 230px;
+  }
+  .contacts__img::before {
+    background-position-y: 0;
+  }
+  .arr::before {
+    display: none;
+  }
+  .portfolio__top {
+    text-align: center;
+  }
+  .portfolio__top .btn {
+    margin-top: 15px;
     margin-left: auto;
     margin-right: auto;
   }
-  .main-slider .owl-carousel .owl-nav button.owl-prev {
-    left: -9px;
-    -webkit-transform: scale(0.7);
-        -ms-transform: scale(0.7);
-            transform: scale(0.7);
+  .portfolio .owl-carousel .owl-stage-outer {
+    padding: 0;
   }
-  .main-slider .owl-carousel .owl-nav button.owl-next {
-    right: -9px;
-    -webkit-transform: scale(0.7);
-        -ms-transform: scale(0.7);
-            transform: scale(0.7);
+  .portfolio__item {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .profile__tabs div {
+    margin-bottom: 10px !important;
   }
 }
