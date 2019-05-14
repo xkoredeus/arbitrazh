@@ -95,6 +95,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .banner_inner {
+    -webkit-background-size: 530% 530%;
+            background-size: 530%;
+  }
   .header {
     padding-bottom: 0;
   }
@@ -118,6 +122,12 @@
 }
 
 @media screen and (max-width: 576px) {
+  .header {
+    padding-top: 10px;
+  }
+  .header .header__logo img {
+    max-width: 250px;
+  }
   .section {
     padding: 40px 0;
   }
